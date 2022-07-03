@@ -1,4 +1,3 @@
-// TODO: Add Toggle to side menu
 function Navbar(props: any) {
 
 

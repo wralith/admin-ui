@@ -16,7 +16,7 @@ function GlobalLayout(props: any) {
       <div className="flex flex-col w-full">
         <Navbar handleSideBar={handleSideBar}/>
         <Breadcrumbs />
-        <div>{props.children}</div>
+        <div className='min-h-[89.7vh]'>{props.children}</div>
       </div>
     </div>
   )
