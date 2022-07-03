@@ -14,7 +14,7 @@ function Sidebar(props: any) {
             <SideBarBrand />
             <SideBarItem content="Login" href="login" />
             <SideBarItem content="Dashboard" />
-            <SideBarItem content="Users" />
+            <SideBarItem content="Users" href="users" />
             <SideBarItem content="Endpoint" />
             <SideBarItem content="Database" />
             <SideBarItem content="Metrics" />

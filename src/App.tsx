@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import GlobalLayout from './components/UI/GlobalLayout'
 import LandingView from './views/LandingView'
 import LoginView from './views/LoginView'
+import UsersView from './views/UsersView'
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingView />} />
         <Route path="/login" element={<LoginView />} />
-        {/* <Route path="about" element={<About />} /> */}
+        <Route path="/users" element={<UsersView />} />
       </Routes>
     </GlobalLayout>
   )
