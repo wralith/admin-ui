@@ -1,0 +1,22 @@
+@tailwind components;
+
+@layer components {
+  .sidebar {
+    @apply overflow-auto bg-primary min-h-screen border-r border-gray-800/75;
+    ul {
+      @apply space-y-2;
+    }
+  }
+
+  .sidebar-item {
+    * {
+      a {
+        @apply flex items-center p-2 mx-2 text-base text-base-content 
+                    rounded-lg hover:bg-base-300;
+        span {
+          @apply ml-3;
+        }
+      }
+    }
+  }
+}
