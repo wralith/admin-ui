@@ -1,7 +1,18 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom"
+import {
+  HiArrowsExpand,
+  HiDatabase,
+  HiLightningBolt,
+  HiLogin,
+  HiTrendingUp,
+  HiUsers,
+  HiViewGrid,
+} from "react-icons/hi"
+import { ReactNode } from "react"
 
 interface SidebarItemType {
   content: string
+  icon?: ReactNode
   href?: string
 }
 
@@ -12,13 +23,13 @@ function Sidebar(props: any) {
         <div className="sidebar">
           <ul>
             <SideBarBrand />
-            <SideBarItem content="Login" href="login" />
-            <SideBarItem content="Dashboard" />
-            <SideBarItem content="Users" href="users" />
-            <SideBarItem content="Endpoint" />
-            <SideBarItem content="Database" />
-            <SideBarItem content="Metrics" />
-            <SideBarItem content="Performance" />
+            <SideBarItem content="Login" icon={<HiLogin />} href="login" />
+            <SideBarItem content="Dashboard" icon={<HiViewGrid />} />
+            <SideBarItem content="Users" icon={<HiUsers />} href="users" />
+            <SideBarItem content="Endpoint" icon={<HiArrowsExpand />} />
+            <SideBarItem content="Database" icon={<HiDatabase />} />
+            <SideBarItem content="Metrics" icon={<HiTrendingUp />} />
+            <SideBarItem content="Performance" icon={<HiLightningBolt />} />
           </ul>
         </div>
       </aside>
@@ -31,8 +42,9 @@ function Sidebar(props: any) {
 function SideBarItem(props: SidebarItemType) {
   return (
     <li className="sidebar-item">
-      <Link to={props.href || '/'}>
+      <Link to={props.href || "/"}>
         <a>
+          <span>{props.icon}</span>
           <span>{props.content}</span>
         </a>
       </Link>
